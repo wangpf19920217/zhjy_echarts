@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <header>
+    		 <h1><img src="../images/txt.png"></h1>
+    		 <ul>
+    		 		<li><a href="./">首页</a></li>
+    		 		<li class="active"><a href="./table">数据图表</a></li>
+    		 		<li><a href="./gis">GIS地图</a></li>
+    		 		<li><a href="./demo">信息图</a></li>
+    		 		<li><a href="./project">可视化专题</a></li>
+    		 		<li><a href="./about">联系我们</a></li>
+    		 </ul>
+    </header>
+    <div class="cont">
+    	<section class="cont-left">
+    		<ul>
+    			 <!-- href="./table/<%= tableUrl[i] %>"-->
+				<% for(var i=0; i<tableList.length; i++) {%>
+				   <li class="<%= tableUrl[i] %>"><a><%= tableList[i] %></a></li>
+				<% } %>
+			</ul>
+    	</section>
+    	<div class="cont-right" >
+    		  <div class="zhexianbox">
+    		  	<div class="table_box">
+	    		  	<a href="./table/zhexian">
+	    		  		<img src="../images/table.png"/>
+	    		  		<span class="zhezhao">
+	    		  			<i>堆叠柱状图适合用于堆叠柱状图适合用于堆叠柱状图适合用于堆叠柱状图适合用于堆叠柱状图适合用于堆叠柱状图适合用于</i>
+	    		  		</span>
+	    		  	</a>
+	    		  	折线图
+	    		  </div>
+    		  </div>
+    		  
+    		  <div class="zhuzhuangbox">
+    		  	<div class="table_box">
+	    		  	<a href="./table/zhexian">
+	    		  		<img src="../images/table.png"/>
+	    		  		<span class="zhezhao">
+	    		  			<i>柱状图</i>
+	    		  		</span>
+	    		  	</a>
+	    		  	堆叠柱状图
+	    		  </div>
+    		  </div>
+    	</div>
+    </div>
+     <script src="/javascripts/jquery-1.11.0.js"></script>
+     <script src="/javascripts/echarts-2.2.7/build/dist/echarts-all.js"></script>
+     <script src="/javascripts/my.js"></script>
+     <!--<script src="/javascripts/table.echarts.js"></script>-->
+     <script>
+     	
+     		$('.zhexian').addClass('active');
+     		$('.cont-left li').click(function(){
+     			$(this).addClass('active').siblings().removeClass('active');
+     			$.each($('.cont-left li'), function() {
+	     			if($(this).hasClass('active')){
+	     				var showbox = ($(this).attr('class').split(' '))[0]+'box';
+	     				console.log(showbox)
+	     				$('.'+showbox+'').show().siblings().hide();
+	     			}
+	     		});
+     		})
+     		
+     		$.each($('.cont-left li'), function() {
+	     			if($(this).hasClass('active')){
+	     				var showbox = ($(this).attr('class').split(' '))[0]+'box';
+	     				console.log(showbox)
+	     				$('.'+showbox+'').show().siblings().hide();
+	     			}
+	     		});
+     </script>
+  </body>
+</html>
+

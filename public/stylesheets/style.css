@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  min-width: 1024px;
+  min-height: 600px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+header {
+  width: 100%;
+  height: 74px;
+  background: #3f97e1;
+  border-bottom: 6px solid #2b88d5;
+  display: -webkit-flex;
+}
+header a {
+  color: #00B7FF;
+  text-decoration: none;
+  color: white;
+}
+header h1 {
+  flex-grow: 1;
+  -webkit-box-flex: 1;
+  color: white;
+  font-size: 28px;
+  line-height: 76px;
+  padding-left: 52px;
+}
+header ul {
+  flex-grow: 1;
+  -webkit-box-flex: 1;
+  display: -webkit-box;
+  justify-content: center ;
+}
+header ul li {
+  -webkit-box-flex: 1;
+  line-height: 76px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+header ul li a {
+  display: block;
+  font-size: 20px;
+}
+header ul li:hover {
+  background: #d14747;
+}
+header ul li.active {
+  background: #d14747;
+}
+header ul li.active:after {
+  content: '';
+  background: darkcyan;
+  border-bottom: 6px solid #d14747;
+}
+.cont.index {
+  width: 100%;
+  height: 100%;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  background: #fffafa;
+}
+.cont.index ul {
+  width: 860px;
+  margin: 70px auto;
+}
+.cont.index ul li {
+  width: 316px;
+  height: 324px;
+  border-radius: 50%;
+  float: left;
+  margin-left: 50px;
+  position: relative;
+  border: 1px solid  #cccccc;
+  margin-bottom: 66px;
+}
+.cont.index ul li img {
+  border-radius: 50%;
+  display: block;
+}
+.cont.index ul li div.zhezhao {
+  border-radius: 50%;
+  background: black;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #DDD;
+  display: none;
+}
+.cont.index ul li div.zhezhao p {
+  position: absolute;
+  top: 41%;
+  left: 11%;
+  line-height: 34px;
+  font-size: 18px;
+  color: white;
+}
+.cont.index ul li.left {
+  margin-right: 80px;
+}
+.cont.index ul li.right {
+  margin-left: 80px;
+}
+.cont.index ul li:hover {
+  border: 1px solid  #2b88d5;
+}
+.cont {
+  width: 100%;
+  height: 100%;
+  display: -webkit-flex;
+}
+.cont .cont-left {
+  width: 160px;
+  min-width: 160px;
+  height: 100%;
+  background: #dceefd;
+  color: #5b9edd;
+  overflow: hidden;
+  padding-top: 14px;
+}
+.cont .cont-left li {
+  text-align: center;
+  height: 48px;
+  line-height: 48px;
+}
+.cont .cont-left li a {
+  color: #2b88d5;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: right;
+  float: right;
+  height: 48px;
+  line-height: 48px;
+  width: 100%;
+  cursor: pointer;
+  padding-right: 33px;
+}
+.cont .cont-left li.active {
+  color: white;
+  background: #2b88d5;
+  display: block;
+}
+.cont .cont-left li.active a {
+  color: white;
+}
+.cont .cont-left a:hover {
+  color: white;
+  background: #2b88d5;
+  display: block;
+}
+.cont .cont-right {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+.cont .cont-right > div {
+  display: none;
+}
+.cont .cont-right div.table_box {
+  width: 346px;
+  height: 355px;
+  float: left;
+  margin-left: 20px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #535353;
+}
+.cont .cont-right div.table_box a {
+  width: 100%;
+  position: relative;
+  display: block;
+  border: 1px solid #dedfe0;
+  margin-bottom: 14px;
+}
+.cont .cont-right div.table_box a img {
+  width: 100%;
+}
+.cont .cont-right div.table_box a span.zhezhao {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #000;
+  opacity: 0.5;
+  display: none;
+}
+.cont .cont-right div.table_box a span.zhezhao i {
+  font-style: normal;
+  display: block;
+  color: #fff;
+  width: 283px;
+  margin: 86px auto;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 100;
+  text-align: left;
+}
